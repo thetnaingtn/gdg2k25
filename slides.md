@@ -184,26 +184,78 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 
 ---
 ---
-## Commands: A way to do things in a non-blocking way!
-
-- command is a function which return tea.Msg
-- Bubbletea called cmd in a separate goroutine
+# Commands: Way to do more things
+- command is just a function which return tea.Msg
+- we can do thing in command such as reading from the disk, network call etc.
 
 ```go [main.go]
-package main
-
 type fetchProductsDone{
-  products []string
+  products []Product
+}
+
+type errMsg{
+  err error
 }
 
 func fetchProducts() tea.Msg{
-  /*
-    Here codes to make an API request to get list of products!
-  */
+  resp, err := http.Get("https://example.com/products")
 
-  // got response
+  if err != nil{
+    return errMsg{err:err}
+  }
+
   return fetchProductsDone{
-    products: []string{"Product1"}
+    products: products
   }
 }
 ```
+---
+---
+# Commands: Way to do more things(Contd)
+- all we need to do is returning a command from Update method alongside with updated model.
+- Bubbletea will call our command.
+````md magic-move {lines: true}
+```go{*|7|12|13-14|15-16|19}
+type model struct{
+  ...
+  list list.Model
+}
+
+func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
+  var cmds []tea.Cmd
+  switch msg := msg.(type) {
+  case tea.KeyEnter:
+    value := m.textarea.Value()
+    m.loading = false
+    cmds = append(cmds, fetchProducts)
+  case errMsg:
+    m.err = errMsg.err // if there is an error, do some error handing
+  case fetchProductsDone:
+    cmds = append(cmds, m.list.SetItems(msg.products))
+  }
+
+  return m, tea.Batch(cmds...)
+}
+```
+````
+---
+layout: center
+---
+# Demo Time!
+
+<style>
+h1 {
+  background-color: #854cff;
+  background-image: linear-gradient(45deg, #854cff 10%, #6a4dff 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+---
+# What
+<img src="./demo.gif"/>
