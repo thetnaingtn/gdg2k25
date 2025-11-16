@@ -186,9 +186,9 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 
 ---
 ---
-# Commands: Way to do more things
-- command is just a function which return tea.Msg
-- we can do thing in command such as reading from the disk, network call etc.
+# Commands
+- A command is simply a function that returns a `tea.Msg`.
+- Used to perform I/O (e.g. reading from a disk, making network calls).
 
 ```go [main.go]
 type fetchProductsDone{
@@ -213,9 +213,9 @@ func fetchProducts() tea.Msg{
 ```
 ---
 ---
-# Commands: Way to do more things(Contd)
-- all we need to do is returning a command from Update method alongside with updated model.
-- Bubbletea will call our command.
+# Commands(Cont'd)
+- Return a command from `Update` method together with updated model.
+- Bubbletea will call the command for us.
 ````md magic-move {lines: true}
 ```go{*|7|12|13-14|15-16|19}
 type model struct{
