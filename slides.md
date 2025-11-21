@@ -56,7 +56,7 @@ These three concepts form a continuous loop that runs throughout the entire life
 # Bubble Tea
 - Bubble Tea TUI framework based on ELM architecture. 
 - In Bubble Tea `Model` is an **interface** with three methods `Init`, `Update` and `View`.
-<FunImage src="/images/charm/bubbletea.png" position="bottom-right" />
+<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="bottom-right" />
 
 ```go
 // https://pkg.go.dev/github.com/charmbracelet/bubbletea#Model
