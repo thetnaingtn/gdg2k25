@@ -18,6 +18,12 @@ layout: center
 - Thet Naing Tun
   - Software Engineer at Kasikorn-X
   - <a href="https://thetnaingtun.dev">thetnaingtun.dev</a>
+  - <div class="flex space-x-2">
+      <a href="https://www.linkedin.com/in/thet-naing-tun-91136616a/"><feather-linkedin/></a>
+      <a href="https://github.com/thetnaingtn"><feather-github/></a>
+      <a href="https://facebook.com/thetnaing.chen"><feather-facebook/></a>
+      <a href="mailto:thetnaingtun.ucsy@gmail.com"><feather-mail/></a>
+    </div>
 - Amateur Badminton Player 🏸 
 <FunImage src="images/gophers/1.png"/>
 
@@ -86,6 +92,7 @@ h1 {
 ---
 level: 2
 ---
+
 # Model: The Heart of the Application
 
 ````md magic-move {lines: true}
@@ -202,6 +209,10 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 
 <FunImage src="images/charm/bubbletea.png" position="top-right" />
 
+<!--
+- terminal can only render string
+-->
+
 ---
 level : 2
 ---
@@ -249,7 +260,7 @@ level: 2
 ---
 # Commands: bubbletea.Cmd
 - A command is simply a function that returns a `tea.Msg`.
-- Use to perform I/O (e.g. reading from a disk, making network calls).
+- We can use `Cmd` to perform I/O (e.g. reading from a disk, making network calls).
 
 ```go
 type fetchProductsDone{
@@ -277,7 +288,7 @@ func fetchProducts() tea.Msg{
 ---
 level: 2
 ---
-# Commands(Cont'd): How to use it
+# Commands(Cont'd): bubbletea.Cmd
 - Return a command from `Update` method together with updated model.
 - Bubbletea will call the command for us.
 
@@ -308,6 +319,15 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 ```
 ````
 ---
+---
+# TUI Components
+- Provided by the Bubbles library from Charm.
+- Includes components such as `Textarea`, `List`, `Viewport`, `Spinner` and more.
+- All these components follow the same Elm architecture.
+- More detail on https://github.com/charmbracelet/bubbles
+<FunImage src="images/charm/bubbles.png"/>
+
+---
 layout: center
 ---
 # Demo Time!
@@ -326,12 +346,25 @@ h1 {
 }
 </style>
 
+
+
 ---
 ---
 # moodify
 
 <img src="/images/demo.gif"/>
 <FunImage src="images/gophers/2.png" position="top-right"/>
+
+---
+---
+# We will use
+- Bubbles library for TUI components which include
+  - Textarea
+  - Viewport
+  - Spinner
+- Lipgloss for styling
+- OpenAI 
+
 ---
 layout: center
 ---

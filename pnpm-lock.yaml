@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iconify-json/feather':
+    specifier: ^1.2.1
+    version: 1.2.1
   '@slidev/cli':
     specifier: ^52.8.0
     version: 52.8.0(@types/markdown-it@14.1.2)(postcss@8.5.6)
@@ -611,6 +614,12 @@ packages:
 
   /@iconify-json/carbon@1.2.14:
     resolution: {integrity: sha512-33u6uGiYJ79Dfp72peT+PBMcjxzi+NyJLpqYRX8pnw0zchsUW7Us2xecgvkWgD83KYcbe6hufyWlHFU9y7fb/Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/feather@1.2.1:
+    resolution: {integrity: sha512-gURNg2TJYuO1U7DoOGCylm9TwkMfzjOH2BHdWsE0IXLXj/MNkFIJu56Wu1xRws27M8hzDzUDt/biGUa/LfAjdg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
