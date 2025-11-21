@@ -19,7 +19,7 @@ layout: center
   - Software Engineer at Kasikorn-X
   - <a href="https://thetnaingtun.dev">thetnaingtun.dev</a>
 - Amateur Badminton Player 🏸 
-<FunImage src="/devfest2k25/images/gophers/1.png"/>
+<FunImage src="images/gophers/1.png"/>
 
 ---
 layout: center
@@ -50,7 +50,7 @@ The Elm Architecture revolve around three main concepts:
 These three concepts form a continuous loop that runs throughout the entire lifecycle of the application.
 </p>
 
-<FunImage src="/devfest2k25/images/gophers/50.png"/>
+<FunImage src="images/gophers/50.png"/>
 
 ---
 ---
@@ -70,7 +70,7 @@ type Model interface {
 ```
 
 This mean any user defined **type** can be a `Model` as long as it implement these three methods.
-<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="bottom-right" />
+<FunImage src="images/charm/bubbletea.png" position="bottom-right" />
 <style>
 h1 {
   background-color: #854cff;
@@ -200,7 +200,7 @@ func(m *model)Update(msg tea.Msg)(tea.Model, tea.Cmd){
 ```
 ````
 
-<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="top-right" />
+<FunImage src="images/charm/bubbletea.png" position="top-right" />
 
 ---
 level : 2
@@ -242,7 +242,7 @@ func checkServer() tea.Msg{
 }
 ```
 ````
-<FunImage src="/devfest2k25/images/charm/bubbles.png" position="bottom-right" />
+<FunImage src="images/charm/bubbles.png" position="bottom-right" />
 
 ---
 level: 2
@@ -272,7 +272,7 @@ func fetchProducts() tea.Msg{
   }
 }
 ```
-<FunImage src="/devfest2k25/images/charm/lipgloss.png" position="top-right" />
+<FunImage src="images/charm/lipgloss.png" position="top-right" />
 
 ---
 level: 2
@@ -281,7 +281,7 @@ level: 2
 - Return a command from `Update` method together with updated model.
 - Bubbletea will call the command for us.
 
-<FunImage src="/devfest2k25/images/charm/bubbletea.png" position="top-right" />
+<FunImage src="images/charm/bubbletea.png" position="top-right" />
 
 ````md magic-move {lines: true}
 ```go{*|7|12|13-14|15-16|19}
@@ -312,7 +312,7 @@ layout: center
 ---
 # Demo Time!
 <img class="mt-4 mx-auto" width="100" height="100" src="/images/moodify-github.png"/>
-<FunImage src="/devfest2k25/images/gophers/41.png"/>
+<FunImage src="images/gophers/41.png"/>
 
 <style>
 h1 {
@@ -337,7 +337,7 @@ layout: center
 ---
 # Q & A
 
-<FunImage src="/devfest2k25/images/gophers/21.png"/>
+<FunImage src="images/gophers/21.png"/>
 <style>
 h1 {
   background-color: #854cff;
