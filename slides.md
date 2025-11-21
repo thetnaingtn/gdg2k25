@@ -1,34 +1,44 @@
 ---
 theme: default
 fonts:
-  sans: Jetbrains Mono
-  mono: Fira Code
+  sans: Google Sans
+  mono: Roboto Mono Light
 title: "From Boring to Charming: Building Expressive CLI with Go and Charm CLI"
 # apply UnoCSS classes to the current slide
 class: text-center
-
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
 ---
-
-## From Boring to Charming: Building Expressive CLI with Go and Charm CLI
-
-Thet Naing Tun
+<img src="/images/title.jpg"/>
+---
+layout: center
+---
+# About Me
+- Thet Naing Tun
+  - Software Engineer at Kasikorn-X
+  - <a href="https://thetnaingtun.dev">thetnaingtun.dev</a>
+- Amateur Badminton Player 🏸 
 
 ---
+layout: center
 ---
-# Why CLI Applications?
-- It has been part of the developer day to day workflow
-- using CLI app doesn't break our workflow
-- I also build my own CLI app to make my life easier
+# Who is this for?
+- New to building CLI apps.
+- Want to build CLI app to meet your own need.
+- Veteram who experienced in building CLI application can also gain different perspective on how to build CLI application in new paradim
 ---
+layout: center
+class: text-center
 ---
-# synrk
-- I found myself having many fork repositories.
-- updating one after another can be time consuming and tedious
-- so I made this tool
-
-
+# What can we build with Bubbletea framework?
+---
+level: 2
+---
+# gh-dash
+---
+level: 2
+---
+# hackernew
 
 ---
 ---
